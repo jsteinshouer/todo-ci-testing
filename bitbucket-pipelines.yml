@@ -1,0 +1,22 @@
+image: ortussolutions/commandbox:lucee5-alpine
+
+clone:
+  depth: 1       # include only the last commit - should build faster
+  
+pipelines:
+  default:
+    - step:
+        image: foundeo/cfml-ci-tools
+        name: lint
+        script:
+          #- box install commandbox-cflint
+          - mkdir test-results
+          - box cflint pattern="models/**.cfc" reportLevel=WARNING --junit fileName=test-results/cflint-results.xml
+    - step:
+        name: test
+        script:
+          - box version
+          - box server start # Maybe use --dryrun would work here if I was on CommandBox v5.1.0 
+          - box install
+          - box server restart  # This is needed to load the H2 Lucee extension
+          - box testbox run outputFile=test-results/junit.xml reporter=junit

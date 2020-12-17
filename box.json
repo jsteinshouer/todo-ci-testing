@@ -1,0 +1,32 @@
+{
+    "name":"Demo ToDo Application",
+    "version":"0.0.0",
+    "author":"",
+    "createPackageDirectory":true,
+    "packageDirectory":"",
+    "slug":"todo-app",
+    "shortDescription":"A demo ToDo Application",
+    "private":true,
+    "dependencies":{
+        "cfmigrations":"^2.0.8",
+        "coldbox":"4.3.0+188"
+    },
+    "devDependencies":{
+        "testbox":"3.0.0+305",
+        "commandbox-dotenv":"*",
+        "commandbox-cfconfig":"*"
+    },
+    "installPaths":{
+        "coldbox":"coldbox/",
+        "testbox":"testbox/",
+        "cfmigrations":"modules/cfmigrations/"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "scripts":{
+        "test":"testbox run"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "app":{
+        "cfengine":"lucee@5"
+    },
+    "openbrowser":"false",
+    "web":{
+        "host":"127.0.0.1",
+        "rewrites":{
+            "enable":"true"
+        },
+        "http":{
+            "port":"3000"
+        }
+    },
+    "JVM":{
+        "heapSize":"1024",
+        "args": "-Dlucee-extensions=465E1E35-2425-4F4E-8B3FAB638BD7280A"
+    }
+}
