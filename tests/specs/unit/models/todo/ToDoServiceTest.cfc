@@ -61,9 +61,9 @@ component output="false" extends="testbox.system.BaseSpec" {
 			});
 
 			
-			it( "should fail this test", function(){
+			it( "true should be true", function(){
 				
-				expect(	true ).toBe( true );
+				expect(	true ).toBe( false );
 				
 			});
 		});
