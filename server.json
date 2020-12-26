@@ -14,6 +14,7 @@
     },
     "JVM":{
         "heapSize":"1024",
-        "args": "-Dlucee-extensions=465E1E35-2425-4F4E-8B3FAB638BD7280A"
-    }
+        "args":"-Dlucee-extensions=465E1E35-2425-4F4E-8B3FAB638BD7280A"
+    },
+    "trayEnable":"false"
 }
